@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Link
 
-- Live Site URL: [Add live site URL here](https://justhali.github.io/social-proof/)
+- Live Site URL: [Click here](https://justhali.github.io/social-proof/)
 
 ## My process
 
