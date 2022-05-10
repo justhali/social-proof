@@ -1,0 +1,179 @@
+/* COLORS */
+:root{
+    --primary-dark: hsl(300, 43%, 22%);
+    --highlight: hsl(333, 80%, 67%);
+    --text-dark: hsl(303, 10%, 53%); 
+    --text-light: hsl(300, 24%, 96%); 
+    --text-white: hsl(0, 0%, 100%); 
+}
+/* QUICK RESET */
+
+html{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'League Spartan', sans-serif;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* MAIN CONTENT */
+main{
+    width: 100%;
+    height: 100%;
+    background: url("./images/bg-pattern-top-mobile.svg") top left no-repeat,
+                url("./images/bg-pattern-bottom-mobile.svg") bottom right no-repeat;
+}
+.main-wrapper{
+    width: 90%;
+    margin: 15px auto;
+}
+.top-content{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.text-info{
+    text-align: center;
+    padding: 20px;
+}
+.text-info h1{
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+.text-info p{
+    line-height: 1.4;
+    color: var(--text-dark);
+}
+.rate-list{
+    width: 100%;
+}
+.rate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--text-light);
+    margin: 10px 0;
+    padding-top: 15px;
+    border-radius: 10px;
+}
+.rate .stars>svg{
+    margin: 0 5px;
+}
+.rate p{
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 17px;
+}
+.bottom-content{
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.testimony-card{
+    background-color: var(--primary-dark);;
+    padding: 30px;
+    margin: 15px 0;
+    border-radius: 10px;
+    width: 100%;
+}
+.header-card{
+    display: flex;  
+    align-items: center;
+}
+.header-card .img-card{
+    width: 40px;
+    height: 40px;
+}
+.header-card .img-card img{
+    border-radius: 50px;
+}
+.header-card .author-info{
+    margin-left: 15px;
+    display: flex;
+    flex-direction:column;
+}
+.header-card .author-info span{
+    line-height: 1.2;
+}
+.author-info .user-name{
+    color: var(--text-light);
+    font-weight: 700;
+}
+.author-info .user-status{
+    color: var(--highlight);
+}
+
+.testimony-card .body-card{
+    color: var(--text-light);
+    line-height: 1.6;
+}
+/* MEDIA QUERIES */
+@media screen and (min-width: 1440px) {
+    main{
+        width: 100%;
+        height: 100%;
+        background: url("./images/bg-pattern-top-desktop.svg") top left no-repeat,
+                        url("./images/bg-pattern-bottom-desktop.svg") bottom right no-repeat;
+    }
+    .main-wrapper{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .top-content{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .text-info{
+        text-align: left;
+        max-width: 50%;
+    }
+    .text-info h1{
+        font-size: 4rem;
+        padding-right: 20px;
+    }
+    .text-info p{
+        font-size: 1.2rem;
+    }
+    .rate-list{
+        min-width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .rate{
+        flex-direction: row;
+        padding-left: 20px;
+        width: 410px;
+    }
+    .rate:nth-child(2),
+    .testimony-card:nth-child(2){
+        align-self: center;
+    }
+    .rate:nth-child(3),
+    .testimony-card:nth-child(3){
+        align-self: flex-end;
+    }
+    .rate .stars{
+        margin-right: 15px;
+    }
+    .bottom-content{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        height: 300px;
+    }
+    .testimony-card{
+        width: 27%;
+        height: 170px;
+    }
+
+}
